@@ -10,6 +10,7 @@ import (
 
 func (app *application) routes() *httprouter.Router {
 
+	//create new instance
 	router := httprouter.New()
 	router.HandlerFunc(http.MethodGet, "/v1/healthcheck", app.healthcheckHandler)
 	router.HandlerFunc(http.MethodPost, "/v1/entries", app.createEntryHandler)

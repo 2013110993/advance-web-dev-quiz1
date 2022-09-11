@@ -39,9 +39,7 @@ func main() {
 		config: cfg,
 		logger: logger,
 	}
-	//Create our new servemux
-	mux := http.NewServeMux()
-	mux.HandleFunc("/v1/healthcheck", app.healthcheckHandler)
+
 	//create our HTTP server
 	srv := &http.Server{
 		Addr: fmt.Sprintf(":%d", cfg.port),
